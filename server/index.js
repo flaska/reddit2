@@ -11,11 +11,11 @@ app.get('/api/list/:name', (req, res) => {
                 title: post.data.title,
                 thumbnail: post.data.thumbnail,
                 url: post.data.url,
-                image: post.preview && post.preview.images ? post.preview.images[0].source.url : null,
-                video: post.preview && post.preview.reddit_video_preview ? post.preview.reddit_video_preview.fallback_url : null
+                image: post.data.preview.images[0] ? post.data.preview.images[0].source.url : null,
+                video: post.data.preview.reddit_video_preview ? post.data.preview.reddit_video_preview.fallback_url : null
             };
         });
-        res.send(result);
+        res.send(result.slice[1,1000]);
 
     });
 });
