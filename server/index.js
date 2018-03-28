@@ -15,7 +15,7 @@ app.get('/api/list/:name', (req, res) => {
                 video: post.data.preview.reddit_video_preview ? post.data.preview.reddit_video_preview.fallback_url : null
             };
         });
-        res.send(result);
+        res.send(result.splice(1,100));
 
     });
 });
