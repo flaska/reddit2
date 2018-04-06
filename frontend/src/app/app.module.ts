@@ -5,6 +5,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 import { List } from './list/list.component';
+import { Item } from './item/item.component';
+
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -17,6 +19,7 @@ import {MatCardModule} from '@angular/material/card';
   declarations: [
     AppComponent,
     List,
+    Item
   ],
   imports: [
     BrowserModule,

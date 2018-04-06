@@ -1,0 +1,12 @@
+<span (click)="expanded=!expanded">
+    <img src="{{post.thumbnail}}" class="thumbnail">
+    <h3 class="title">{{post.title}}</h3>
+</span>
+<div *ngIf="expanded">
+    <img *ngIf="post.type=='image'" src="{{post.image}}" class="content">
+    <div *ngIf="post.type=='video'" class="content">
+        <video controls>
+            <source src="{{post.video}}">
+        </video>
+    </div>
+</div>
